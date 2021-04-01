@@ -5,7 +5,7 @@ metadata:
     volume.beta.kubernetes.io/storage-provisioner: alicloud/disk
   labels:
     app: {{ template "gitlab-runner.fullname" . }}
-  name: gitlab-runner-cache
+  name: {{ template "gitlab-runner.fullname" . }}-gitlab-runner-cache
 spec:
   accessModes:
   - ReadWriteOnce
